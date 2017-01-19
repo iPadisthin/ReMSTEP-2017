@@ -1,0 +1,62 @@
+.v-nav-toggle {
+    display: block;
+    width: 6em;
+    height: 3em;
+    padding: 1em;
+    text-align: center;
+    background: $yellow;
+    position: absolute;
+    left: 0;
+    margin-top: -3.5em;
+    cursor: pointer;
+    border-bottom: none;
+    &:before {
+        content: "\2630";
+        margin-right: 8px;
+    }
+    @media only screen and (min-width: em(1780)) {
+        display: none;
+    }
+}
+.vertical-nav {
+    background: #fff;
+    max-width: 320px;
+    padding: 0 0 0 10px;
+    margin-bottom: 2em;
+    position: absolute;
+    left: -320px;
+    z-index: 1000;
+    transistion: left 1s ease-in;
+    &.open {
+        left: 0;
+    }
+    @media only screen and (min-width: em(1780)) {
+        position: static;
+        float: left;
+    }
+    > ul {
+        padding: 0;
+        margin: 0;
+        border-right: 1px solid $yellow;
+        
+    }
+    li {
+        list-style-type: none;
+        font-weight: 500;
+        margin-bottom: 0;
+        ul {
+            font-size: 14/16*1em;
+        }
+    }
+    a {
+        border: none;
+        display: block;
+        padding: 1em 10px;
+        &.current {
+            background: $yellow;
+        }
+        &:hover {
+            background: #E0CA00;
+        }
+    }
+}

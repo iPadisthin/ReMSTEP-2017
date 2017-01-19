@@ -1,0 +1,120 @@
+/*** page header ***/
+.hero {
+    background-image: url("/img/nightsky.jpg");
+    background-repeat: repeat;
+    position: relative;
+    margin-bottom: 80px;
+    &.home, &.conf {
+        margin-bottom: 0;
+    }
+    .container {
+        padding: 0;
+        overflow: hidden;
+        blockquote {
+            display: none;
+            quotes: none;
+            position: absolute;
+            top: 5px;
+            color: #fff;
+            margin: 0 7.5%;
+            text-align: left;
+            p {
+                font-size: 1em;
+                font-style: normal;
+                margin: 0 0 0.5em 0;
+                color: #fff;
+                text-align: center;
+                text-shadow: 0 1px 0 #555;
+                &:before,
+                &:after {
+                    content: "";
+                    font-size: 0;
+                    line-height: 0;
+                    margin-left: 0;
+                    vertical-align: 0;
+                }
+            }
+            footer {
+                color: #fff;
+                text-align: right;
+                text-shadow: 0 1px 0 #555;
+                font-size: 0.8em;
+            }
+        }
+    }
+    .page-title {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        min-height: 119px;
+        .container {
+            padding: 0 20px;
+        }
+        .subheading {
+            color: $purple;
+            font-size: 1em; //16px
+            font-weight: 500;
+            margin: 0 0 0.5em 0;
+            span {
+                font-size: 24/16*1em;
+            }
+        }
+        &.conference {
+            background: $purple;
+            background: rgba(144, 91, 161, 0.95);
+            h1 {
+                color: #fff;
+                font-family: 'Roboto Slab', serif;
+                font-weight: 100;
+                text-transform: uppercase;
+                margin-top: 0.5em;
+            }
+            .subheading {
+                color: $green;
+            }
+        }
+        @media only screen and (min-width: em(600)) {
+            position: absolute;
+            bottom: 0px;
+        }
+    }
+    .vid-wrapper {
+        margin: 0;
+    }
+}
+@media only screen and (min-width: em(465)) {
+    .hero {
+        .container {
+            blockquote {
+                display: block;
+                top: auto;
+                bottom: 5%;
+                p {
+                    margin: 0 0 1em 0;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: em(600)) {
+    .hero {
+        .container {
+            blockquote {
+                p {
+                    font-weight: 100;
+                    font-size: 1.5em;
+                }
+                footer {
+                    font-size: 1em;
+                }
+            }
+        }
+        .page-title {
+            bottom: 20px;
+            &.conference {
+                h1 {
+                    font-size: 4em;
+                }
+            }
+        }
+    }
+}

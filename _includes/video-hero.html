@@ -1,0 +1,17 @@
+<div class="hero">
+    <div class="container">
+        <!--<figure class="vid-wrapper">
+            <video source src="/video/{{ page.heroImage }}" autoplay>
+            </video>
+        </figure>-->
+        <figure class="vid-wrapper">
+            <iframe width="853" height="480" src="http://www.youtube.com/embed/{{ page.heroImage }}?rel=0&amp;autoplay=1&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;loop=1" frameborder="0" allowfullscreen></iframe>
+        </figure>
+    </div>
+    <div class="page-title wow fadeInDown animated">
+        <div class="container">
+            <h1>{{ page.title }}</h1>
+            <p class="subheading">{{ page.subTitle }} {% if page.confDate != nil %} - <span>{{ page.confDate }}</span>{% endif %}</p>
+        </div>
+    </div>
+</div>

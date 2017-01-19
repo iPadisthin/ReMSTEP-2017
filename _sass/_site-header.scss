@@ -1,0 +1,162 @@
+/*** masthead ***/
+
+.full-title {
+    background: #f0d900;
+    h1,
+    p {
+        color: #222;
+        font-size: 0.6em;
+        font-weight: 500;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+}
+@media only screen and (min-width: em(600)) {
+    .full-title {
+        h1,
+        p {
+            font-size: 1em;
+            font-weight: 300;
+        }
+    }
+}
+.site-nav {
+    position: relative;
+    padding-right: 150px;
+    margin: 1em auto;
+}
+a.remstep-logo {
+    border-bottom: none;
+}
+.main-nav {
+    display: none;
+    ul,
+    li {
+        list-style: none;
+    }
+    ul {
+        display: inline-block;
+    }
+    li {
+        display: inline-block;
+        margin: 10px 20px 0 0;
+        font-size: 1.2em;
+    }
+    a {
+        color: $purple;
+        text-decoration: none;
+        white-space: nowrap;
+        border-bottom: none;
+        &:hover {
+            border-bottom: 1px dotted $purple;
+        }
+    }
+}
+.social {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: top 1s;
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: block;
+        float: left;
+    }
+    li {
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+        a {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: transparent;
+            border: 1px solid #905ba1;
+            &:hover {
+                background: whitesmoke;
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+.social li a.twitter:before,
+.social li a.youtube:before {
+    content: "\f099";
+    font-family: "FontAwesome";
+    font-size: 20px;
+    line-height: 20px;
+    color: #905ba1;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.social li a.youtube:before {
+    content: "\f167";
+}
+@media only screen and (min-width: em(500)) {
+    .social {
+        li {
+            width: 60px;
+            height: 60px;
+            a.twitter:before,
+            a.youtube:before {
+                font-size: 30px;
+                line-height: 30px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+.mobile-menu-toggle {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 20px 0;
+    background: #f1f1f1;
+}
+@media only screen and (min-width: em(600)) {
+    .site-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 1000;
+        img:first-child {
+            transition: width 1s ease;
+            width: 323px;
+        }
+        &.shrink {
+            box-shadow: 0 5px 8px -8px black;
+            .site-nav {
+                transition: all 1s ease;
+                margin-top: 1em;
+                img:first-child {
+                    width: 240px;
+                }
+            }
+        }
+    }
+    .site-nav {
+        margin: 2em auto;
+    }
+    .mobile-menu-toggle {
+        display: none;
+    }
+    .main-nav {
+        display: inline;
+    }
+}

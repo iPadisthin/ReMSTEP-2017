@@ -1,0 +1,75 @@
+.button {
+    color: $darkgreen;
+    display: inline-block;
+    border: 1px dotted $green;
+    padding: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+    &:visited {
+        color: $darkgreen;
+    }
+    &:hover {
+        color: #eee;
+        text-decoration: none;
+        background: $darkgreen;
+        @include background-image( radial-gradient($green, $darkgreen));
+        border: 1px solid $green;
+    }
+    &.goto {
+        &:after {
+            content: "\f054";
+            font-family: FontAwesome;
+            margin-left: 1.5em;
+            vertical-align: middle;
+        }
+    }
+    &.download {
+        &:after {
+            content: "\f078";
+            font-family: FontAwesome;
+            margin-left: 1.5em;
+            vertical-align: middle;
+        }
+    }
+    &.info {
+        &:after {
+            content: "\f05a";
+            font-family: FontAwesome;
+            margin-left: 1.5em;
+            vertical-align: middle;
+        }
+    }
+    &.register {
+        color: #fff;
+        background: $green;
+        text-transform: uppercase;
+        font-size: 24/16*1em;
+        &:hover {
+            color: #eee;
+            text-decoration: none;
+            background: $darkgreen;
+            @include background-image( radial-gradient($green, $darkgreen));
+        }
+    }
+    &.video {
+        background-image: url("/img/play-green.svg");
+        background-repeat: no-repeat;
+        background-position: right 5px center;
+        background-size: 1.5em 1.5em;
+        padding-right: 40px;
+    }
+    &.pill {
+        padding: 3px 10px;
+        border-radius: 20px;
+    }
+    &.disabled {
+        color: #999;
+        border: 1px dotted #999;
+        cursor: default;
+        &:hover {
+            color: #999;
+            background: none;
+        }
+    }
+}

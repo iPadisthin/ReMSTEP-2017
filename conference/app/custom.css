@@ -1,0 +1,53 @@
+html .ui-bar-a .ui-btn.ui-btn-active { background-color: #905ba1; }
+.ui-header { background: #f0d900; text-align: center; border: none;}
+.ui-header img { max-width: 90%; transform: translateX(-10px); }
+.ui-header .ui-title { background: #34b196; color: #fff; margin: 0; text-shadow: none; text-transform: uppercase; font-weight: normal; }
+.program .session {
+    padding: 0.1em 1em;
+}
+.program .session.odd {
+    background: #B0E8DC;
+}
+.program .concurrent {
+    background: #fff;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+.ui-btn {
+    background-color: #34b196;
+    border-color: #34b196;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.6);
+    font-weight: normal;
+}
+.ui-mini.ui-btn {
+    background-color: #f6f6f6;
+    border-color: #ddd;
+    color: #333;
+    text-shadow: 0 1px 0 #f3f3f3; 
+}
+iframe {
+    width: 100%;
+    max-width: 600px;
+}
+[data-role="collapsible"] div {
+    display: none;
+    font-size: 80%;
+    border: 1px solid #ddd;
+    margin: .446em;
+    padding: 1em;
+}
+[data-role="collapsible"] .ui-btn.open:after {
+    transform: rotate(45deg);
+    transition: transform 1s ease;
+}
+body {
+    padding-bottom: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+body.ui-mobile-viewport,
+.ui-footer {
+    max-width: 800px;
+    margin: 0 auto;
+}

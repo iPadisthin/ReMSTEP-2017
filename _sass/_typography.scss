@@ -1,0 +1,171 @@
+/*** typography ***/
+
+body {
+    font-family: 'Roboto', 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+h1 {
+    font-size: 1.8em;
+    font-weight: 300;
+    color: #444;
+    margin: 1em 0 0 0;
+    line-height: 1.2;
+    @media only screen and (min-width: em(465)) {
+        font-size: 2.25em; //36px;
+    }
+}
+h2 {
+    font-size: 2.5em; //40px
+    font-weight: 300;
+    margin: 2em 0 0 0;
+    color: $purple;
+}
+.large-text h2 {
+    text-align: center;
+    font-family: 'Lemon', cursive;
+    font-weight: 400;
+    font-size: 3em;
+    margin: 2em 0 0.5em 0;
+    color: rgb(240, 217, 0);
+    /*#2c3e50;*/
+}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+p {
+    font-size: 1.125em; //18px
+    max-width: 835px;
+    &.intro {
+        font-size: 1.375em; //22px
+        line-height: 1.6;
+        color: $green;
+    }
+}
+.large-text p {
+    font-size: 1.375em; //22px
+    line-height: 1.5;
+    &.extra-right-space {
+        margin-right: 29%;
+    }
+}
+ul,
+ol {
+    padding: 0 0 0 20px;
+    max-width: 835px;
+}
+li {
+    margin-bottom: 0.8em;
+}
+figure {
+    margin: 1em 0;
+}
+figcaption {
+    font-size: 0.875em;
+    font-weight: 500;
+}
+figure.horizontal {
+    @include clearfix;
+    img {
+        width: 50%;
+        float: left;
+    }
+    figcaption {
+        width: 50%;
+        float: left;
+        padding: 20px 0 0 20px;
+    }
+}
+figure.right {
+    text-align: right;
+}
+ul.unstyled,
+ol.unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+strong,
+b {
+    font-weight: 500;
+    color: #555;
+}
+.large-text b {
+    color: $darkgreen;
+}
+.centered {
+    text-align: center;
+    p,
+    ul,
+    ol {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+blockquote {
+    quotes: "\201C""\201D""\2018""\2019";
+    margin: 4em 2em;
+    max-width: 400px;
+    p {
+        margin: 0 0 0.2em 0;
+        padding-bottom: 0.5em;
+        color: $purple;
+        font-style: italic;
+        font-weight: 500;
+        &:before {
+            content: open-quote;
+            color: $purple;
+            font-size: 4em;
+            line-height: 0.1em;
+            margin-right: 0.25em;
+            margin-left: -0.6em;
+            vertical-align: -0.4em;
+            font-family: helvetica;
+        }
+        border-bottom: 1px solid $purple;
+        
+        &:after {
+            content: close-quote;
+            color: $purple;
+            /*font-size: 4em;
+            line-height: 0.1em;
+            margin-left: 0.25em;
+            vertical-align: -0.8em;*/
+            font-family: helvetica;
+        }
+    }
+    footer {
+        text-align: right;
+        cite {
+            font-size: 12/16*1em;
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+}
+hr {
+    margin: 2em 0;
+}
+
+/*** links ***/
+
+a {
+    text-decoration: none;
+    color: $linkblue;
+    border-bottom: 1px dotted;
+    &:visited {
+        color: $linkblue;
+    }
+    &:hover {
+        color: $green;
+    }
+    &[rel="external"] {
+        &:after {
+            content: "\f08e";
+            font-family: FontAwesome;
+            margin-left: .5em;
+            vertical-align: middle;
+            font-style: normal;
+        }
+    }
+}

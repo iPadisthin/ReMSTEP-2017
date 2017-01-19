@@ -1,0 +1,232 @@
+/*** home page unique components ***/
+
+.conference-highlight {
+    height: 10px;
+    background: #905ba1;
+    background-image: url("/img/conference-highlight.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.conference-text {
+    padding: 10px 0 0 10px;
+    max-width: 520px;
+    position: relative;
+    h2,
+    p {
+        margin: 0;
+        color: #fff;
+    }
+    h2 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 7vw;
+        @media only screen and (min-width: em(570)) {
+            font-size: 2.5em;
+        }
+    }
+    a {
+        display: inline-block;
+        position: absolute;
+        right: 20px;
+        color: $yellow;
+        border-bottom: none;
+        &:hover {
+            border-bottom: 1px dotted;
+        }
+    }
+}
+.home-feature {
+    position: relative;
+    padding: 30px 40px 5em 40px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: $lightgreen;
+    h2 {
+        margin: 0 0 0.5em 0;
+        font-size: 1.8em;
+    }
+    p {
+        margin: 0;
+    }
+    .download.button {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+    }
+    .more-link {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        text-align: right;
+        &:after {
+            content: "\f054";
+            font-family: FontAwesome;
+            margin-left: .5em;
+            vertical-align: middle;
+            color: $linkblue;
+        }
+    }
+    img {
+        width: 45%;
+        margin-left: 5%;
+        float: right;
+        margin-bottom: 0.5em;
+    }
+}
+.infograph {
+    width: 460px;
+    margin: 0;
+    min-height: 220px;
+    background-repeat: no-repeat;
+    background-size: 184px 184px;
+    background-position: left center;
+    padding: 0 0 0 200px;
+    float: right;
+    & + p {
+        clear: both;        
+    }
+    @media only screen and (min-width: em(800)) {
+        padding-top: 20px;
+        & + p {
+           clear: none; 
+        }
+    }
+    h2 {
+        font-family: 'Roboto', 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        margin: 0 .4em 0 0;
+        display: inline-block;
+        font-size: 5em;
+        line-height: 1;
+    }
+    p {
+        font-size: 14/16*1em;
+        margin: 0 0 20px 0;
+    }
+}
+.infograph.out-of-field {
+    background-image: url("/img/infograph3.png");
+    margin-left: 20px;
+    h2,
+    p {
+        color: #257E6B;
+    }
+}
+.olt {
+    text-align: center;
+    p {
+        font-size: 0.6em;
+        max-width: 100%;
+    }
+}
+.logos {
+    @include clearfix;
+    text-align: center;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    div {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        float: left;
+    }
+}
+@media only screen and (min-width: em(768)) {
+    .logos {
+        div {
+            width: 25%;
+        }
+    }
+}
+ol.innovations.large {
+    max-width: 768px;
+    margin: 0 auto;
+}
+ol.innovations li {
+    margin-top: 1em;
+}
+ol.innovations.large li {
+    font-size: 1.4em;
+}
+ol.innovations li span {
+    color: #34b196;
+    font-weight: 500;
+    float: left;
+    margin: 0 20px 1em 0;
+}
+
+.home-panels {
+    @include outer-container;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+}
+.home-panel {
+    @media only screen and (min-width: em(640)) {
+        @include span-columns(4);
+        display: flex;
+    }
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    header {
+        padding: 1.5em 1em;
+    }
+    h2 {
+        margin: 0;
+        font-size: 24/16* 1em;
+        color: #fff;
+    }
+    ul {
+        flex: 1 0 auto; //fill remaining space
+        padding: 0;
+    }
+    li {
+        list-style: none;
+        padding: 0 1em 0 1.5em;
+        position: relative;
+        &:before {
+            display: block;
+            content: "";
+            width: 0px; 
+            height: 0px; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid $green;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    footer {
+        text-align: right;
+        padding: 0 1em;
+    }
+    &.green {
+        border: 1px solid $green;
+        header {
+            background: $green;
+        }
+        li:before {
+            border-left: 10px solid $green;
+        }
+    }
+    &.red {
+        border: 1px solid $red;
+        header {
+            background: $red;
+        }
+        li:before {
+            border-left: 10px solid $red;
+        }
+    }
+    &.purple {
+        border: 1px solid $purple;
+        header {
+            background: $purple;
+        }
+        li:before {
+            border-left: 10px solid $purple;
+        }
+    }
+}

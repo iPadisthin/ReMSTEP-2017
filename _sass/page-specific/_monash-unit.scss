@@ -1,0 +1,151 @@
+/*** SCI1390 page styles ***/
+/*** EDF5674 page styles ***/
+
+aside {
+    h2 {
+        margin-top: 0px;
+    }
+    p.large {
+        font-size: 1.125em;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &.workload {
+        display: none;
+        @media only screen and (min-width: em(600)) {
+            display: block;
+        }
+    }
+}
+.circled {
+    display: block;
+    width: 100px;
+    height: 100px;
+    font-size: 4em;
+    text-align: center;
+    background: $green;
+    border-radius: 100px;
+    line-height: 1.4;
+    margin: 0 auto;
+    color: white;
+}
+
+/*** SCI1390 page styles ***/
+
+figure.process {
+    display: inline-block;
+    vertical-align: top;
+    margin: 7px;
+}
+figure.process figcaption {
+    font-weight: 500;
+}
+
+/*** EDF5674 page styles ***/
+
+.edf5674.hours {
+    padding: 0;
+    li {
+        font-size: 0.8em;
+        list-style: none;
+        text-align: center;
+        ul {
+            padding: 0;
+            margin: 1em 0;
+        }
+        li {
+            font-size: 1em;
+            text-align: left;
+            span {
+                font-size: 2em;
+                color: $lightgreen;
+                display: inline;
+                float: left;
+                padding: 0 8px 16px 0;
+                line-height: 1;
+                margin-top: 0px;
+            }
+        }
+        span {
+            font-size: 6em;
+            display: block;
+            line-height: 0.8;
+            color: $green;
+            margin-top: 20px;
+            &.or {
+                display: block;
+                font-size: 1em;
+                padding: 0.8em 0 0 0;
+                float: none;
+                text-align: center;
+            }
+            &.plus {
+                display: block;
+                font-size: 2em;
+                padding: 0;
+                float: none;
+                text-align: center;
+                line-height: 1;
+                margin: 10px 0;
+            }
+        }
+    }
+}
+.activities {
+    padding: 20px 0;
+}
+.activity-list {
+    li {
+        list-style: none;
+        margin-left: 120px;
+    }
+    padding: 0;
+}
+.icon-list {
+    padding: 0;
+    li {
+        font-weight: 400;
+        margin-left: -120px;
+    }
+}
+.shadow,
+.interview,
+.talks {
+    position: relative;
+    min-height: 110px;
+    list-style: none;
+    padding-left: 120px;
+    margin-left: -20px;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 110px;
+        height: 110px;
+        background-image: url("/img/shadow.png");
+        background-size: 100%;
+    }
+    span {
+        position: absolute;
+        top: 20%;
+        @media only screen and (min-width: em(500)) {
+            top: 40%;
+        }
+    }
+}
+.interview {
+    &:before {
+        background-image: url("/img/interview.png");
+    }
+}
+.talks {
+    &:before {
+        background-image: url("/img/conference.png");
+    }
+}
+.lithgow {
+    @media only screen and (min-width: em(720)) {
+        margin-left: 120px;
+    }
+}

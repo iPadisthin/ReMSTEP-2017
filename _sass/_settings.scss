@@ -1,0 +1,33 @@
+/*** settings ***/
+
+/* primary colors */
+
+$purple: #905ba1;
+$green: #34b196;
+$red: #e84b3c;
+$yellow: #f0d900;
+
+/* secondary colors */
+
+$darkpurple: #744983;
+$lightgreen: #B0E8DC;
+$darkgreen: #257E6B;
+$backgroundgreen: #0cdfae;
+$darkgrey: #555555;
+$linkblue: #2980b9;
+$unimelbblue: #31465C;
+
+
+$gutter: 10/960*100%;
+$one-col: 60/960*100%;
+$two-cols: 2*60/960*100%+(2*$gutter);
+$three-cols: 3*60/960*100%+(4*$gutter);
+$four-cols: 4*60/960*100%+(6*$gutter);
+$five-cols: 5*60/960*100%+(8*$gutter);
+$six-cols: 6*60/960*100%+(10*$gutter);
+$seven-cols: 7*60/960*100%+(12*$gutter);
+$eight-cols: 8*60/960*100%+(14*$gutter);
+$nine-cols: 9*60/960*100%+(16*$gutter);
+$ten-cols: 10*60/960*100%+(18*$gutter);
+$eleven-cols: 11*60/960*100%+(20*$gutter);
+$twelve-cols: 12*60/960*100%+(22*$gutter);

@@ -1,0 +1,23 @@
+/*** site footer ***/
+
+.site-footer {
+    background: #f3f3f3;
+}
+.site-footer p {
+    font-size: 0.75em;
+    font-weight: 300;
+}
+.cc {
+    position: relative;
+    max-width: 540px;
+    padding: 20px 0 20px 120px;
+    margin: 0 auto;
+}
+.cc img {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.cc p {
+    margin: 0;
+}

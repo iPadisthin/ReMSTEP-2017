@@ -1,0 +1,31 @@
+.bubble {
+    position: relative;
+    background: #b0e8dc;
+    margin: 4em 0;
+    padding: 20px;
+    border-radius: 6px;
+    display: inline-block;
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 0px solid transparent;
+        border-right: 100px solid transparent;
+        border-top: 40px solid #b0e8dc;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(80%);
+    }
+    
+    p {
+        &:before, &:after {
+            content: "";
+            font-size: 0;
+        }
+        text-align: left;
+        color: #222;
+        font-style: normal;
+        font-weight: 300;
+    }
+}

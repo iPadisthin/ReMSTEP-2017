@@ -116,6 +116,8 @@ textarea {
 
 /*** components ***/
 @import "components/buttons";
+@import "components/overview";
+
 
 .alert {
     margin: 2em 0;
@@ -580,11 +582,6 @@ ul.tablist {
 @import "page-specific/conference-page";
 @import "page-specific/monash-unit";
 
-
-figure.right {
-    @include span-columns(8);
-    @include shift(3);
-}
 
 /* ==========================================================================
    Helper classes

@@ -26,7 +26,7 @@
     position: absolute;
     left: -320px;
     z-index: 1000;
-    transistion: left 1s ease-in;
+    transition: left 0.5s ease-in;
     &.open {
         left: 0;
     }

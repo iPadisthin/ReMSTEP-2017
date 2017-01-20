@@ -10,6 +10,23 @@
     max-width: 1140px;
     @include clearfix;
 }
+.row {
+    @include row();
+}
+.span4 {
+    @include span-columns(4);
+}
+.span8 {
+    @include span-columns(8);
+}
+@media only screen and (min-width: em(1140)) {
+.shift3 {
+    @include shift(3);
+}
+.shift4 {
+    @include shift(4);
+}
+}
 .narrow.container {
     max-width: 1000px;
 }

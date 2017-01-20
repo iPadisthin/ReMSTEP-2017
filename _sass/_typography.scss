@@ -58,6 +58,7 @@ li {
     margin-bottom: 0.8em;
 }
 figure {
+    display: inline-block;
     margin: 1em 0;
 }
 figcaption {
@@ -105,7 +106,9 @@ b {
 blockquote {
     quotes: "\201C""\201D""\2018""\2019";
     margin: 4em 2em;
-    max-width: 400px;
+    width: 50%;
+    min-width: 320px;
+    float: right;
     p {
         margin: 0 0 0.2em 0;
         padding-bottom: 0.5em;
@@ -136,11 +139,9 @@ blockquote {
     }
     footer {
         text-align: right;
-        cite {
-            font-size: 12/16*1em;
-            font-style: normal;
-            font-weight: 500;
-        }
+        font-size: 12/16*1em;
+        font-style: normal;
+        font-weight: 500;
     }
 }
 hr {

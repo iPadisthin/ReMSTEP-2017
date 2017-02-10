@@ -4,7 +4,11 @@
     </div>
     <div class="page-title wow fadeInDown animated">
         <div class="container">
+            {% if page.level == 2 %}
+            <p class="h1">{{ page.title }}</p>
+            {% else %}
             <h1>{{ page.title }}</h1>
+            {% endif %}
             <p class="subheading">{{ page.subTitle }} {% if page.confDate != nil %} - <span>{{ page.confDate }}</span>{% endif %}</p>
         </div>
     </div>

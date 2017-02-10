@@ -1,22 +1,27 @@
+.row {
+    @include row;
+}
+.page-summary {
+    background: #FDEEED;
+    padding: 1em;
+    margin: 2em 0;
+}
+.overview,
+.innovation-list {
+    @include span-columns(6);
+    @include pad(1em);
+}
 .overview {
-    background: $green;
-    h2 {
-        display: inline-block;
-        font-size: 1.2em;
-        margin-left: 20px;
-        padding: 0.5em 1em;
-        background: white;
-        color: $green;
-        font-weight: 300;
+    p {
+        font-size: 1.6em;
+        margin-top: 0;
     }
-    ul {
-        padding: 0;
-        li {
-            color: white;
-            border-bottom: 1px solid white;
-            list-style: none;
-            padding: 0.8em 20px;
-            margin: 0;
-        }
+}
+.innovation-list {
+    p {
+        margin-top: 0;
+    }
+    .innovation-callout {
+        @include span-columns(6);
     }
 }

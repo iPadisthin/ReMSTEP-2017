@@ -5,13 +5,25 @@ body {
     font-weight: 300;
 }
 h1 {
-    font-size: 1.8em;
-    font-weight: 300;
-    color: #444;
+    font-size: 1em;
+    font-weight: 500;
+    color: $green;
     margin: 1em 0 0 0;
     line-height: 1.2;
-    @media only screen and (min-width: em(465)) {
-        font-size: 2.25em; //36px;
+    text-transform: uppercase;
+}
+.page-title {
+    h1,
+    p.h1 {
+        font-size: 1.8em;
+        font-weight: 300;
+        color: #444;
+        margin: 1em 0 0 0;
+        line-height: 1.2;
+        text-transform: none;
+        @media only screen and (min-width: em(465)) {
+            font-size: 2.25em; //36px;
+        }
     }
 }
 h2 {
@@ -36,15 +48,15 @@ h6 {}
 p {
     font-size: 1.125em; //18px
     max-width: 835px;
+    line-height: 1.6;
     &.intro {
         font-size: 1.375em; //22px
-        line-height: 1.6;
         color: $green;
     }
 }
 .large-text p {
     font-size: 1.375em; //22px
-    line-height: 1.5;
+    //line-height: 1.5;
     &.extra-right-space {
         margin-right: 29%;
     }
@@ -92,7 +104,7 @@ b {
     color: #555;
 }
 .large-text b {
-    color: $darkgreen;
+    color: $green;
 }
 .centered {
     text-align: center;
@@ -106,9 +118,8 @@ b {
 blockquote {
     quotes: "\201C""\201D""\2018""\2019";
     margin: 4em 2em;
-    width: 50%;
+    width: 40%;
     min-width: 320px;
-    float: right;
     p {
         margin: 0 0 0.2em 0;
         padding-bottom: 0.5em;
@@ -130,10 +141,6 @@ blockquote {
         &:after {
             content: close-quote;
             color: $purple;
-            /*font-size: 4em;
-            line-height: 0.1em;
-            margin-left: 0.25em;
-            vertical-align: -0.8em;*/
             font-family: helvetica;
         }
     }
@@ -142,10 +149,13 @@ blockquote {
         font-size: 12/16*1em;
         font-style: normal;
         font-weight: 500;
+        cite {
+            font-style: normal;
+        }
     }
 }
 hr {
-    margin: 2em 0;
+    margin: 6em 0;
 }
 
 /*** links ***/

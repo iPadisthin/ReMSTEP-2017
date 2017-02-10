@@ -103,8 +103,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-@import "bourbon";
-@import "neat";
+@import "bourbon/bourbon";
+@import "neat/neat";
 @import "settings";
 @import "base";
 @import "typography";

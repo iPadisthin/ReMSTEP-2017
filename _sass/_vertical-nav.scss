@@ -25,7 +25,7 @@
     margin-bottom: 2em;
     position: absolute;
     left: -320px;
-    z-index: 1000;
+    z-index: 999;
     transition: left 0.5s ease-in;
     &.open {
         left: 0;
